@@ -1,11 +1,15 @@
-import React from 'react'
+interface PersonProps {
+    name: string;
+    age: number;
+    IsMarried: boolean;
+  }
 
-const Person = (props) => {
+const Person = ({ name, age, IsMarried }:PersonProps) => {
   return (
     <div>
-        <p>Name: {props.name} </p>
-        <p>age: {props.age} </p>
-        <p>this person: {props.IsMarried ? "is Married" : "is single"} </p>
+        <p>Name: {name} </p>
+        <p>age: {age} </p>
+        <p>this person: {IsMarried ? "is Married" : "is single"} </p>
     </div>
   )
 }
